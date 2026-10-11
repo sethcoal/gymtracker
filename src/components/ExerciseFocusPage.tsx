@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react';
 import { Workout } from '../types';
-import { EXERCISES, Exercise, getExerciseById } from '../data/exercises';
+import { EXERCISES, getExerciseById } from '../data/exercises';
 import { loadFocusedExercises, saveFocusedExercises } from '../storage';
 
 interface ExerciseFocusPageProps {

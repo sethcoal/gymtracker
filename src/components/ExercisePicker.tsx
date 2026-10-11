@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { EXERCISES, MUSCLE_GROUPS, Exercise } from '../data/exercises';
-import { generateId } from '../storage';
 
 interface ExercisePickerProps {
   onSelect: (exercise: Exercise) => void;

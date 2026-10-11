@@ -33,12 +33,6 @@ function estimate1RM(weight: number, reps: number): number {
   return weight * (1 + reps / 30);
 }
 
-// Brzycki formula (alternative)
-function estimate1RMBrzycki(weight: number, reps: number): number {
-  if (reps === 1) return weight;
-  return weight * (36 / (37 - reps));
-}
-
 export default function ExerciseDetailPage({ exerciseId, workouts, onBack }: ExerciseDetailPageProps) {
   const [selectedMetric, setSelectedMetric] = useState<GraphMetric>('estimated-1rm');
   const [repsFilter, setRepsFilter] = useState<number>(0); // 0 = any reps
@@ -59,7 +53,6 @@ export default function ExerciseDetailPage({ exerciseId, workouts, onBack }: Exe
       if (!entry) return null;
 
       const workingSets = entry.sets.filter((s) => s.type === 'working');
-      const allSets = entry.sets;
 
       // Filter by reps if needed
       const filteredSets = repsFilter > 0 ? workingSets.filter((s) => s.reps >= repsFilter) : workingSets;
