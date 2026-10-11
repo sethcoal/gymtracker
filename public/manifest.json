@@ -1,0 +1,17 @@
+{
+  "name": "FitTrack - Simple Fitness Logger",
+  "short_name": "FitTrack",
+  "description": "A simple fitness app for tracking workouts and minimum effective dose",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a2e",
+  "theme_color": "#1a1a2e",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
